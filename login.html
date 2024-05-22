@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer plateform</title>
+   
+    <!-- Swiffy Slider CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+    <!-- Bootstrap CSS (only one version) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="" />
+
+    <!-- jQuery,Bootstrap JS,Swiffy Slider JS link -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+    
+    <!-- navber section start  -->
+    <nav class="navbar">
+        <div class="container d-flex">
+            <div class="navbar-brand">
+                <h1>Volunteer</h1>
+            </div>
+            <div class="nav-list d-flex">
+                <ul class="navbar-nav d-flex flex-row g-lg-4">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="service.html">Service</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-user"></i> Username
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li>
+                            <a class="dropdown-item" href="profile.html"><i class="fa fa-user"></i> Profile</a>
+                          </li>
+                          <li>
+                            <a onclick="handlelogOut(event)" class="dropdown-item"><i class="fa fa-sign-out"></i> Logout</a>
+                          </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reg-login d-flex">
+                    <ul class="navbar-nav d-flex flex-row">
+                        <li><a class="nav-link signup" href="register.html">SignUp</a></li>
+                        <li><a class="nav-link signin" href="login.html">SignIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navber section end  -->
+
+
+
+    <!-- login section start -->
+    <div class="container register-section">
+       
+        <div class="img_section col-md-4">
+            <img src="/img/signin1.png" alt="...">
+        </div>
+        <div class="col-md-6">
+            <form class="well form-horizontal" action="" method="post" id="contact_form" onsubmit="handleLogin(event)">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend id="rrrrrrr">Sign In</legend>
+        
+                    <!-- Username input -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <input id="login-email" name="email" placeholder="" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Password</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <input id="login-password" name="password" placeholder="Enter Password" class="form-control" type="password" required value="@#23asdf">
+                            </div>
+                        </div>
+                    </div>
+
+
+        
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <div class="col-md-4"><br>
+                            <button type="submit" class="login_btn">
+                                SUBMIT
+                            </button>
+                            <p><a href="register.html">go to register page.</a></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div> 
+    </div>
+    <!-- login section end -->
+
+    <div class="container register-section">
+        <div class="img_section col-md-4">
+            <img src="/img/signin1.png" alt="...">
+        </div>
+        <div class="col-md-6">
+            <form class="well form-horizontal" action="" method="post" id="contact_form">
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend id="rrrrrrr">Sign In</legend>
+        
+                    <!-- Email input -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <input id="login-email" name="email" placeholder="" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Password</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <input id="login-password" name="password" placeholder="Enter Password" class="form-control" type="password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <div class="col-md-4"><br>
+                            <button type="submit" class="login_btn">SUBMIT</button>
+                            <p><a href="register.html">Go to register page.</a></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="error" style="color: red;"></div>
+        </div> 
+    </div>
+    <!-- login section end -->
+  
+
+
+
+    <!-- footer section start --> 
+    <footer class="footer-section">
+        <div class="first-section container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row flex-row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>101, Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 pt-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>+880 1581528651</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>raselsarkercse@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 class="footer-text">Volunteer</h3>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                elit,Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/mdrasel.sarker.7773631"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://www.linkedin.com/in/rasel-sarker-405160227/"><i class="fab fa-linkedin-in linkedin-bg"></i></a>
+                                <a href="https://github.com/raselsarker11"><i class="fab fa-github github-bg"></i></a>
+                                <a href="@raselsarker2023"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="raselsarkercse@gmail.com"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">about</a></li>
+                                <li><a href="service.html">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="service.html">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="blog.html">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2018, All Right Reserved <a href="#">Rasel sarker</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7 row d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+   
+    <!-- script file  -->
+    <script src="/js/app.js"></script>
+    <script src="/js/register.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/change-pass.js"></script>
+    <script src="/js/reset-pass.js"></script>
+    
+    <script
+    src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+    crossorigin="anonymous"
+    defer
+    ></script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- script link end -->
+
+</body>
+</html>

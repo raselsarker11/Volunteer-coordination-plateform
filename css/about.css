@@ -1,0 +1,130 @@
+
+/*** about section start ***/
+.banner-container {
+    position: relative; 
+    height: 85vh;
+    width: 100%;
+    background-image: url("/img/child.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.container {
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    color: white;
+}
+
+.container h1 {
+    font-size: 36px;
+}
+
+.container p {
+    font-size: 18px;
+}
+
+
+
+
+/*** Subcribe section start  ***/
+.subscribe_section {
+    text-align: center;
+  }
+  
+  .subscribe_section .box {
+    background-color: #d4ced0;
+    padding: 75px 45px;
+  }
+  
+  .subscribe_section .subscribe_form .heading_container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #047faf;
+    text-decoration: none;
+  }
+  
+  .subscribe_section .subscribe_form .heading_container h2 {
+    padding: 0 25px;
+  }
+  
+  .subscribe_section .subscribe_form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .subscribe_section .subscribe_form form input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 90px;
+    outline: none;
+    padding: 5px 25px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .subscribe_section .subscribe_form form input::-webkit-input-placeholder {
+    color: #171620;
+  }
+  
+  .subscribe_section .subscribe_form form input:-ms-input-placeholder {
+    color: #171620;
+  }
+  
+  .subscribe_section .subscribe_form form input::-ms-input-placeholder {
+    color: #171620;
+  }
+  
+  .subscribe_section .subscribe_form form input::placeholder {
+    color: #171620;
+  }
+  
+  .subscribe_section .subscribe_form form button {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #f7444e;
+    border: 1px solid #f7444e;
+    color: #ffffff;
+    border-radius: 35px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    margin-top: 35px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 285px;
+  }
+  
+  .subscribe_section .subscribe_form form button:hover {
+    background-color: transparent;
+    color: #f7444e;
+  }
+  /*** Subcribe section end  ***/
+  
+

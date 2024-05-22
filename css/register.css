@@ -1,0 +1,71 @@
+/*** register section start ***/
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px; 
+    background-color: #EFFDF5;
+  }
+  .inputGroupContainer{
+    width: 100%;
+  }
+  
+  .register_btn {
+    width: 530px !important;
+    background-color: #04AA6D; 
+    color:white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    
+   
+  }
+  
+  .register_btn:hover {
+    background-color: rgb(8, 214, 183);
+    float: white;
+    font-size: large;
+    color:white;
+  }
+  
+  .register-section .img_section {
+    flex: 1;
+    text-align: center;
+    margin-right: 35%;
+  }
+  
+  .register-section .img_section img {
+    width: 300%;
+    height: 650px;
+  }
+  
+  .register-section .form-horizontal {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 10px;
+  }
+  
+  .register-section .form-horizontal legend {
+    padding-top: 2%;
+  }
+  #rrrrrrr {
+    font-size: 40px;
+    font-weight: bold;
+    color: #04AA6D;
+  }
+  #contact_form{
+    padding-right: 20%;
+    gap: 5%;
+  }
+  .input-group{
+    width: 100%;
+  }
+  
+  input[type="username"], input[type="password"], input[type="email"], input[type="last_name"] {
+    text-transform: lowercase;
+  }
+  
+/*** register section end ***/
+/*** register section end ***/

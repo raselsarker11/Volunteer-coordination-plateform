@@ -1,0 +1,611 @@
+
+/*** navber section start  ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  height: 95px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    font-size: 24px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.reg-login {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+.reg-login .navbar-nav {
+    display: flex;
+    gap: 10px;
+}
+.reg-login .navbar-nav .signup {
+    border-radius: 15px;
+    color: #000;
+}
+
+.reg-login .navbar-nav .signin {
+    border-radius: 15px;
+    color: #000;
+}
+
+.nav-link.signup:hover,
+.nav-link.signin:hover {
+    color: #fff; 
+    background-color: #0056b3;
+}
+
+/*** navber section end  ***/
+
+
+/*** about section start  ***/
+.about-part {
+  height: 100%;
+  /* background-color: ; */
+  padding-top: 65px;
+}
+
+/*** about section end  ***/
+
+
+
+/*** banner section start  ***/
+.text-section {
+  padding-top: 8%;
+}
+.text-section h1 {
+  color: #00FF00;
+  font-weight: bold;
+}
+.text-section h2 {
+  color: #00FF00;
+}
+.text-section p {
+  color: hsl(250, 21%, 5%);
+  font-weight: 100px;
+  font-size: medium;
+}
+
+.banner-section{
+  padding-top: 20px;
+}
+
+/*** banner section end  ***/
+
+
+/*** Category wise activities section start  ***/
+/* Container to center the content and add padding */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox to layout category section */
+.category {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 23%; /* Approximately 4 cards per row with some spacing */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25em;
+  margin: 10px 0;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #666;
+}
+
+/*** Category wise activities section end  ***/
+
+
+
+/*** activities section start  ***/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.activities {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.activities-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/*** activities section end  ***/
+
+
+
+/*** Contact section start  ***/
+.accordion-body{
+    display: flex;
+  }
+  .form_body{
+    padding-top: 35%;
+  }
+  .why_section{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    /* background-color: #73C5FE; */
+  }
+  div.form_sub .field input[type="email"], div.form_sub .field input[type="email"]:hover, div.form_sub .field input[type="email"]:focus {
+    padding: 10px 110px 10px 15px;
+    border-radius: 5px;
+    border: solid #ccc 1px;
+    font-size: 14px;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    height: 48px;
+  }
+  
+  .form_sub {
+      position: relative;
+  }
+  
+  .form_sub input[type="email"] + input[type="submit"] {
+    position: absolute;
+    right: 0;
+    background: #0cbe9d;
+    color: #fff;
+    border: 3px;
+    top: 0px;
+    font-size: 14px;
+    height: 48px;
+    font-weight: 600;
+    padding: 0 15px;
+  }
+  
+  form input {
+    background: #fff;
+    border: solid #ccc 1px;
+    padding: 15px 15px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: normal;
+  }
+  
+  form textarea {
+    background: #fff;
+    border: solid #ccc 1px;
+    padding: 15px 15px;
+    width: 100%;
+    min-height: 150px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: normal;
+  }
+  
+  form input[type="submit"] {
+    border: none;
+    padding: 15px 45px;
+    width: auto;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: normal;
+    margin: 0 auto;
+    display: flex;
+    background: #13AFBC;
+    color: #fff;
+    font-weight: 600;
+    transition: ease all 0.1s;
+  }
+  
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+  
+    background: #f7444e;
+    color: #fff;
+  }
+  .heading_centr{
+    font-size: 35px;
+    color: #13AFBC;
+  }
+  .ppp {
+    background-color: #EFFDF5;
+  }
+  .reg-login{
+    width: 180px !important;
+    border-radius: 20px;
+    border: 1px solid rgb(2, 206, 121);
+    background-color: #D9EEE1;
+  }
+  .reg-login .navbar-nav .k {
+    width: 100px !important;
+    border-radius: 18px;
+    border: 1px solid rgb(2, 206, 121);
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+/*** Contact section end  ***/
+
+
+
+/*** Subcribe section start  ***/
+.subscribe_section {
+  text-align: center;
+}
+
+.subscribe_section .box {
+  background-color: #d4ced0;
+  padding: 75px 45px;
+}
+
+.subscribe_section .subscribe_form .heading_container {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #047faf;
+  text-decoration: none;
+}
+
+.subscribe_section .subscribe_form .heading_container h2 {
+  padding: 0 25px;
+}
+
+.subscribe_section .subscribe_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.subscribe_section .subscribe_form form input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 90px;
+  outline: none;
+  padding: 5px 25px;
+  background-color: #ffffff;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.subscribe_section .subscribe_form form input::-webkit-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input:-ms-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input::-ms-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input::placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form button {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #f7444e;
+  border: 1px solid #f7444e;
+  color: #ffffff;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  margin-top: 35px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 285px;
+}
+
+.subscribe_section .subscribe_form form button:hover {
+  background-color: transparent;
+  color: #f7444e;
+}
+/*** Subcribe section end  ***/
+
+
+
+/*** footer section start  ***/
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.linkedin-bg{
+  background: #55ACEE;
+}
+.github-bg{
+  background: #DD4B39;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+.first-section {
+  margin-top: 20px;
+}
+.footer-text{
+  color: white;
+}
+  
+/*** footer section end  ***/
