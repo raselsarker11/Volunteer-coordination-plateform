@@ -44,7 +44,7 @@ const handleRegistration = async (event) => {
     if (response.ok) {
       document.getElementById("error").innerText = "Congratulations! Your Account Created Successfully.";
       document.getElementById("contact_form").reset();
-      window.location.href = "https://raselsarker11.github.io/Volunteer-coordination-plateform/register.html";
+      window.location.href = "https://raselsarker11.github.io/Volunteer-coordination-plateform/login.html";
     } else {
       document.getElementById("error").innerText = data?.message || "Registration failed. Please try again.";
     }
