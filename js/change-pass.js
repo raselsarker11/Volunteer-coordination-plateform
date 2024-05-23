@@ -1,9 +1,10 @@
 
 
-function validateSignupForm() {
+document.getElementById('signupForm').addEventListener('submit', handlePassword);
+
+function handlePassword(event) {
     event.preventDefault();
     
-    // Get input values
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     
@@ -19,21 +20,16 @@ function validateSignupForm() {
     }
     
     // If validation passes, proceed with form submission
-    submitForm();
-  }
+    submitForm(password);
+}
   
-  // Function to submit the form data
-  function submitForm() {
+// Function to submit the form data
+function submitForm(password) {
     // Display loader
     document.getElementById('loader').innerHTML = 'Loading...';
     
-    // Get form data
-    const password = document.getElementById('password').value;
-    
     // Construct data object
-    const data = {
-        password: password
-    };
+    const data = { password: password };
     
     // Make API call to update password
     fetch("https://volunteer-coordination-platform.onrender.com/api/account/changepassword/", {
@@ -60,4 +56,4 @@ function validateSignupForm() {
         alert('An error occurred. Please try again later.');
         document.getElementById('loader').innerHTML = ''; // Clear loader
     });
-  }
+}
