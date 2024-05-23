@@ -1,24 +1,33 @@
-const handleProfile = (event) => {
-    event.preventDefault();
-    const user_id = getUserId(); 
-    const username = getValue("inputUsername");
-    const first_name = getValue("inputFirstName");
-    const last_name = getValue("inputLastName");
-    const email = getValue("inputEmailAddress");
-    const password = getValue("password");
-    const confirm_password = getValue("confim_password");
-    const info = {
-        username,
-        first_name,
-        last_name,
-        email,
-        password,
-        confirm_password,
-    };
+document.addEventListener("DOMContentLoaded", () => {
+    const handleProfile = (event) => {
+        event.preventDefault();
 
-    fetch(`https://volunteer-coordination-platform.onrender.com/api/account/profile/${user_id}`, {
-            method: "PUT", 
-            headers: { "content-type": "application/json" },
+        const username = getValue("username");
+        const email = getValue("email");
+        const password = getValue("password");
+        const confirm_password = getValue("confirm_password");
+
+        const errorElement = document.getElementById("error");
+        errorElement.innerText = "";
+
+        if (password !== confirm_password) {
+            errorElement.innerText = "Passwords do not match.";
+            return;
+        }
+
+        const info = {
+            username,
+            email,
+            password,
+            password2: confirm_password,
+        };
+
+        fetch("https://volunteer-coordination-platform.onrender.com/api/account/profile/${user_id}", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("token")}` // Ensure the token is stored in localStorage
+            },
             body: JSON.stringify(info),
         })
         .then((res) => {
@@ -29,18 +38,18 @@ const handleProfile = (event) => {
         })
         .then((data) => {
             console.log(data);
+            alert("Profile updated successfully.");
+            // Optionally, redirect or update the UI to reflect the changes
         })
         .catch((error) => {
-            // Handle error
             console.error("Error during fetch:", error);
+            errorElement.innerText = "An error occurred while updating the profile.";
         });
-};
+    };
 
-const getValue = (id) => {
-    const value = document.getElementById(id).value;
-    return value;
-};
+    const getValue = (id) => {
+        return document.getElementById(id).value;
+    };
 
-const getUserId = (res) => {
-    return request.user.id;
-};
+    document.getElementById("updateProfileForm").addEventListener("submit", handleProfile);
+});

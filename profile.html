@@ -86,65 +86,76 @@
     <!-- profile page section start -->
     <div class="ppp container-xxl py-5">
         <div class="">
-           <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-               <h1 class="mb-3">Update your profile.</h1>
-               <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-           </div>
-           <div class="row g-4">
-               <div class="col-12">
-                   <div class="row gy-4">
-                     <div class="col-xl-4">
-                       <!-- Profile picture card-->
-                       
-                   </div>  
-               <div class="col-md-6">
-                   <div class="wow fadeInUp" data-wow-delay="0.5s">
-                       <form>
-                           <div class="row g-3">
-                               <div class="col-md-6">
-                                   <div class="form-floating">
-                                       <input type="text" class="form-control" id="name" placeholder="First Name">
-                                       <label for="name">First Name</label>
-                                   </div>
-                               </div>
-                               <div class="col-md-6">
-                                   <div class="form-floating">
-                                     <input type="text" class="form-control" id="name" placeholder="Last name">
-                                     <label for="name">Last Name</label>
-                                   </div>
-                               </div>
-                               <div class="col-12">
-                                  <div class="form-floating">
-                                     <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                     <label for="email">Your Email</label>
-                                  </div>
-                               </div>
-                               <div class="col-md-6">
-                                 <div class="form-floating">
-                                     <input type="text" class="form-control" id="password" placeholder="password">
-                                     <label for="password">password</label>
-                                 </div>
-                             </div>
-                             <div class="col-md-6">
-                                 <div class="form-floating">
-                                   <input type="text" class="form-control" id="password" placeholder="confirm password">
-                                   <label for="password">confirm password</label>
-                                 </div>
-                             </div>
-                               <div class="col-12">
-                                   <!-- Save changes button-->
-                                 <div class="update_password">
-                                   <button onclick="handleProfile(event)" class="btn btn-primary btttn" href="index.html" type="button">Update</button>
-                                   <a class="btn btn-primary btttn" href="change-pass.html" type="button">password changes</a>
-                                 </div>
-                               </div>
-                           </div>
-                       </form>
-                   </div>
-               </div>
-           </div>
-       </div>
-    </div>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Update your profile.</h1>
+                <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="row gy-4">
+                        <div class="col-xl-4">
+                            <!-- Profile picture card-->
+                        </div>  
+                        <div class="col-md-6">
+                            <div class="wow fadeInUp" data-wow-delay="0.5s">
+                                <form id="updateProfileForm" onsubmit="handleProfile(event)">
+                                    <div class="row g-3">
+                                        <p id="error" class="danger-error"></p>
+                                        <div class="form-group">
+                                            <label class="col-md-12 control-label">Username</label>
+                                            <div class="col-md-12 inputGroupContainer">
+                                                <div class="input-group">
+                                                    <input id="username" name="name" placeholder="" required class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Email input -->
+                                        <div class="form-group">
+                                            <label class="col-md-12 control-label">Email</label>
+                                            <div class="col-md-12 inputGroupContainer">
+                                                <div class="input-group">
+                                                    <input id="email" name="user_email" placeholder="" class="form-control" type="email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <!-- Password input -->
+                                        <div class="form-group">
+                                            <label class="col-md-12 control-label">Password</label>
+                                            <div class="col-md-12 inputGroupContainer">
+                                                <div class="input-group">
+                                                    <input id="password" name="user_password" placeholder="" class="form-control" type="password" required>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <!-- Confirm Password input -->
+                                        <div class="form-group">
+                                            <label class="col-md-12 control-label">Confirm Password</label>
+                                            <div class="col-md-12 inputGroupContainer">
+                                                <div class="input-group">
+                                                    <input id="confirm_password" name="user_password" placeholder="" class="form-control" type="password" required>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-12">
+                                            <!-- Save changes button-->
+                                            <div class="update_password">
+                                                <button class="btn btn-primary btttn" type="submit">Update</button>
+                                                <a class="btn btn-primary btttn" href="change-pass.html" type="button">Password Changes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
     <!-- profile page section end -->
 
 
