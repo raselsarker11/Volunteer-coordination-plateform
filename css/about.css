@@ -1,32 +1,31 @@
 
 /*** about section start ***/
-
 .about-section {
-  align-items: center;
-  justify-content: center;
-  text-align: center; 
-  background-color: #030929;
-  color: white; 
-  height: 65vh;
+  background-image: url("https://d2u0ktu8omkpf6.cloudfront.net/7541a2778d6da29c516261e3d3ce6f5eddfd4de4988a1cec.jpg");
+  background-size: cover;
+  background-position: center; 
+  color: white;
+  text-align: center;
+  padding: 100px 0; 
+  height: 70vh;
 }
 
-.about-section .container {
-  max-width: 800px;
-  padding: 20px;
-}
-.part{
-  padding-top: 120px;
+.about-content {
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 
-.about-section h1 {
-  padding-left: 40px;
-  font-size: 2.5em; 
-  margin-bottom: 20px; 
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.about-section p {
-  font-size: 1.2em; 
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
+
+/*** about section end ***/
 
 
 
